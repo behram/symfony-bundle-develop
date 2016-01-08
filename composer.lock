@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e7bf57ef76e43e3ce48b78e99973f2a2",
-    "content-hash": "2b874ff67d9d1b74fc2a6b8cd0cdad7f",
+    "hash": "0bb2440dd980745a78184d3a0b12251d",
+    "content-hash": "89c41562a6893f3672177f95d858fdb7",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -777,12 +777,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/EnterprisePHP/EPAsyncEventDispatcherBundle.git",
-                "reference": "7ca965eb224d5c0e4a10445085f7004914128eb1"
+                "reference": "1d124c70bcf23ddd07fff1d9ba4328ac29d44f42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EnterprisePHP/EPAsyncEventDispatcherBundle/zipball/7ca965eb224d5c0e4a10445085f7004914128eb1",
-                "reference": "7ca965eb224d5c0e4a10445085f7004914128eb1",
+                "url": "https://api.github.com/repos/EnterprisePHP/EPAsyncEventDispatcherBundle/zipball/1d124c70bcf23ddd07fff1d9ba4328ac29d44f42",
+                "reference": "1d124c70bcf23ddd07fff1d9ba4328ac29d44f42",
                 "shasum": ""
             },
             "require": {
@@ -839,7 +839,7 @@
                 "source": "https://github.com/EnterprisePHP/EPAsyncEventDispatcherBundle/tree/master",
                 "issues": "https://github.com/EnterprisePHP/EPAsyncEventDispatcherBundle/issues"
             },
-            "time": "2016-01-07 09:16:34"
+            "time": "2016-01-08 17:07:28"
         },
         {
             "name": "enterprisephp/display-bundle",
@@ -847,12 +847,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/EnterprisePHP/EPDisplayBundle.git",
-                "reference": "f03d923884f5688851df00ea8e2ac9e7701da0dc"
+                "reference": "2bb3b24c5bbad08685e782e87ce577ba4dad2a79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EnterprisePHP/EPDisplayBundle/zipball/f03d923884f5688851df00ea8e2ac9e7701da0dc",
-                "reference": "f03d923884f5688851df00ea8e2ac9e7701da0dc",
+                "url": "https://api.github.com/repos/EnterprisePHP/EPDisplayBundle/zipball/2bb3b24c5bbad08685e782e87ce577ba4dad2a79",
+                "reference": "2bb3b24c5bbad08685e782e87ce577ba4dad2a79",
                 "shasum": ""
             },
             "require": {
@@ -910,7 +910,80 @@
                 "source": "https://github.com/EnterprisePHP/EPDisplayBundle/tree/master",
                 "issues": "https://github.com/EnterprisePHP/EPDisplayBundle/issues"
             },
-            "time": "2016-01-06 09:30:22"
+            "time": "2016-01-08 17:03:05"
+        },
+        {
+            "name": "enterprisephp/doctrine-lock-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EnterprisePHP/EPDoctrineLockBundle.git",
+                "reference": "7c9288ce84c17b2f7b01f2b9db216655ae3c1b69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EnterprisePHP/EPDoctrineLockBundle/zipball/7c9288ce84c17b2f7b01f2b9db216655ae3c1b69",
+                "reference": "7c9288ce84c17b2f7b01f2b9db216655ae3c1b69",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|~7.0",
+                "psr/log": "^1.0",
+                "symfony/framework-bundle": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "jms/serializer-bundle": "^1.0",
+                "sensio/framework-extra-bundle": "^3.0",
+                "symfony/browser-kit": "^2.7|^3.0",
+                "symfony/dependency-injection": "^2.7|^3.0",
+                "symfony/form": "^2.7|^3.0",
+                "symfony/phpunit-bridge": "~2.7|^3.0",
+                "symfony/security-bundle": "^2.7|^3.0",
+                "symfony/serializer": "^2.7|^3.0",
+                "symfony/twig-bundle": "^2.7|^3.0",
+                "symfony/validator": "^2.7|^3.0",
+                "symfony/web-profiler-bundle": "^2.7|^3.0",
+                "symfony/yaml": "^2.7|^3.0"
+            },
+            "suggest": {
+                "jms/serializer-bundle": "Add support for advanced serialization capabilities, recommended, requires ^1.0",
+                "sensio/framework-extra-bundle": "Add support for route annotations and the view response listener, requires ^3.0",
+                "symfony/expression-language": "Add support for using the expression language in the routing, requires ^2.7|^3.0",
+                "symfony/serializer": "Add support for basic serialization capabilities and xml decoding, requires ^2.7|^3.0",
+                "symfony/validator": "Add support for validation capabilities in the ParamFetcher, requires ^2.7|^3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "EP\\DoctrineLockBundle\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Behram ÇELEN",
+                    "email": "behramcelen@gmail.com"
+                }
+            ],
+            "description": "Lock object against delete, update events",
+            "homepage": "https://enterprisephp.github.io",
+            "keywords": [
+                "doctrine",
+                "lock",
+                "lockable"
+            ],
+            "support": {
+                "source": "https://github.com/EnterprisePHP/EPDoctrineLockBundle/tree/master",
+                "issues": "https://github.com/EnterprisePHP/EPDoctrineLockBundle/issues"
+            },
+            "time": "2016-01-08 17:01:26"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1092,16 +1165,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "d762ee5b099a29044603cd4649851e81aa66cb47"
+                "reference": "dd8998b7c846f6909f4e7a5f67fabebfc412a4f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/d762ee5b099a29044603cd4649851e81aa66cb47",
-                "reference": "d762ee5b099a29044603cd4649851e81aa66cb47",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/dd8998b7c846f6909f4e7a5f67fabebfc412a4f7",
+                "reference": "dd8998b7c846f6909f4e7a5f67fabebfc412a4f7",
                 "shasum": ""
             },
             "require": {
@@ -1136,7 +1209,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2015-12-10 14:48:13"
+            "time": "2016-01-06 13:31:20"
         },
         {
             "name": "psr/log",
@@ -2081,7 +2154,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "enterprisephp/display-bundle": 20,
-        "enterprisephp/async-event-dispatcher-bundle": 20
+        "enterprisephp/async-event-dispatcher-bundle": 20,
+        "enterprisephp/doctrine-lock-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
