@@ -1,0 +1,15 @@
+AppBundle\Entity\DummyEntity:
+  type: entity
+  table: dummy_entity
+  repositoryClass: AppBundle\Entity\DummyEntityRepository
+  id:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+  fields:
+    title:
+      type: string
+    description:
+      type: string
