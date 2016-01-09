@@ -16,9 +16,9 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
-            new EP\DoctrineLockBundle\DoctrineLockBundle(),
-            new EP\DisplayBundle\DisplayBundle(),
-            new EP\AsyncEventDispatcherBundle\AsyncEventDispatcherBundle(),
+            new EP\DoctrineLockBundle\EPDoctrineLockBundle(),
+            new EP\DisplayBundle\EPDisplayBundle(),
+            new EP\AsyncEventDispatcherBundle\EPAsyncEventDispatcherBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
