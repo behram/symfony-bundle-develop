@@ -2,11 +2,17 @@
 
 namespace AppBundle\Entity;
 
+use EP\DoctrineLockBundle\Traits\LockableTrait;
+use EP\DoctrineLockBundle\Annotations\Lockable;
+
 /**
  * ObjectLock
+ * @Lockable
  */
 class DummyEntity
 {
+    use LockableTrait;
+
     /**
      * @var int
      */
