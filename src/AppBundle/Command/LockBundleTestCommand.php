@@ -75,5 +75,16 @@ class LockBundleTestCommand extends ContainerAwareCommand
         $output->writeln($objectLocker->switchLock($dummyEntity, ObjectLockParams::INSERT_LOCK));
         //unswitchlock update process
         $output->writeln($objectLocker->switchLock($dummyEntity, ObjectLockParams::UPDATE_LOCK));
+
+        $output->writeln('');
+        $output->writeln('### IS LOCKED TEST ###');
+        //switch full lock
+        $output->writeln($objectLocker->isLocked($dummyEntity));
+        //switch delete process
+        $output->writeln($objectLocker->isLocked($dummyEntity, ObjectLockParams::DELETE_LOCK));
+        //switch insert process
+        $output->writeln($objectLocker->isLocked($dummyEntity, ObjectLockParams::INSERT_LOCK));
+        //unswitchlock update process
+        $output->writeln($objectLocker->isLocked($dummyEntity, ObjectLockParams::UPDATE_LOCK));
     }
 }
