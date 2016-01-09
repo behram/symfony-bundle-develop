@@ -45,6 +45,8 @@ class DummyEntity
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
     }
 
     /**
@@ -62,5 +64,7 @@ class DummyEntity
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
     }
 }
