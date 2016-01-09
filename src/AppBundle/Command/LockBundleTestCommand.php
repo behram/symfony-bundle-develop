@@ -11,7 +11,9 @@ use EP\DoctrineLockBundle\Params\ObjectLockParams;
 
 class LockBundleTestCommand extends ContainerAwareCommand
 {
-    /** @var EntityManager */
+    /**
+     * @var EntityManager
+     */
     private $em;
 
     protected function configure()
