@@ -3,6 +3,7 @@
 namespace AppBundle\Command;
 
 use AppBundle\Entity\DummyEntity;
+use EP\DoctrineLockBundle\Exception\LockedObjectException;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -46,45 +47,92 @@ class LockBundleTestCommand extends ContainerAwareCommand
 
         $output->writeln('### TEST LOCK PROCESS ###');
         //lock fully
-        $output->writeln($objectLocker->lock($dummyEntity));
+        $output->writeln($objectLocker->lock(new DummyEntity()));
         //lock delete process
-        $output->writeln($objectLocker->lock($dummyEntity, ObjectLockParams::DELETE_LOCK));
+        $output->writeln($objectLocker->lock(new DummyEntity(), ObjectLockParams::DELETE_LOCK));
         //lock insert process
-        $output->writeln($objectLocker->lock($dummyEntity, ObjectLockParams::INSERT_LOCK));
+        $output->writeln($objectLocker->lock(new DummyEntity(), ObjectLockParams::INSERT_LOCK));
         //lock update process
-        $output->writeln($objectLocker->lock($dummyEntity, ObjectLockParams::UPDATE_LOCK));
+        $output->writeln($objectLocker->lock(new DummyEntity(), ObjectLockParams::UPDATE_LOCK));
 
         $output->writeln('');
         $output->writeln('### TEST UNLOCK PROCESS ###');
         //unlock full lock
-        $output->writeln($objectLocker->unlock($dummyEntity));
+        $output->writeln($objectLocker->unlock(new DummyEntity()));
         //unlock delete process
-        $output->writeln($objectLocker->unlock($dummyEntity, ObjectLockParams::DELETE_LOCK));
+        $output->writeln($objectLocker->unlock(new DummyEntity(), ObjectLockParams::DELETE_LOCK));
         //unlock insert process
-        $output->writeln($objectLocker->unlock($dummyEntity, ObjectLockParams::INSERT_LOCK));
+        $output->writeln($objectLocker->unlock(new DummyEntity(), ObjectLockParams::INSERT_LOCK));
         //unlock update process
-        $output->writeln($objectLocker->unlock($dummyEntity, ObjectLockParams::UPDATE_LOCK));
+        $output->writeln($objectLocker->unlock(new DummyEntity(), ObjectLockParams::UPDATE_LOCK));
 
         $output->writeln('');
         $output->writeln('### TEST SWITCH PROCESS ###');
         //switch full lock
-        $output->writeln($objectLocker->switchLock($dummyEntity));
+        $output->writeln($objectLocker->switchLock(new DummyEntity()));
         //switch delete process
-        $output->writeln($objectLocker->switchLock($dummyEntity, ObjectLockParams::DELETE_LOCK));
+        $output->writeln($objectLocker->switchLock(new DummyEntity(), ObjectLockParams::DELETE_LOCK));
         //switch insert process
-        $output->writeln($objectLocker->switchLock($dummyEntity, ObjectLockParams::INSERT_LOCK));
+        $output->writeln($objectLocker->switchLock(new DummyEntity(), ObjectLockParams::INSERT_LOCK));
         //unswitchlock update process
-        $output->writeln($objectLocker->switchLock($dummyEntity, ObjectLockParams::UPDATE_LOCK));
+        $output->writeln($objectLocker->switchLock(new DummyEntity(), ObjectLockParams::UPDATE_LOCK));
 
         $output->writeln('');
         $output->writeln('### IS LOCKED TEST ###');
         //switch full lock
-        $output->writeln($objectLocker->isLocked($dummyEntity));
+        $output->writeln($objectLocker->isLocked(new DummyEntity()));
         //switch delete process
-        $output->writeln($objectLocker->isLocked($dummyEntity, ObjectLockParams::DELETE_LOCK));
+        $output->writeln($objectLocker->isLocked(new DummyEntity(), ObjectLockParams::DELETE_LOCK));
         //switch insert process
-        $output->writeln($objectLocker->isLocked($dummyEntity, ObjectLockParams::INSERT_LOCK));
+        $output->writeln($objectLocker->isLocked(new DummyEntity(), ObjectLockParams::INSERT_LOCK));
         //unswitchlock update process
-        $output->writeln($objectLocker->isLocked($dummyEntity, ObjectLockParams::UPDATE_LOCK));
+        $output->writeln($objectLocker->isLocked(new DummyEntity(), ObjectLockParams::UPDATE_LOCK));
+
+        $output->writeln('');
+        $output->writeln('### OBJECT PERSIST TEST (You must see exception) ###');
+        $dummyEntity
+            ->setTitle('Dummy Title')
+            ->setDescription('Dummy Description')
+            ;
+        try{
+            $this->em->persist(new DummyEntity());
+        }catch(LockedObjectException $e){
+            $output->write($e->getMessage());
+        }
+
+        $output->writeln('unlock full lock');
+        $output->writeln($objectLocker->unlock(new DummyEntity()));
+        $output->writeln('unlock insert lock');
+        $output->writeln($objectLocker->unlock(new DummyEntity(), ObjectLockParams::INSERT_LOCK));
+
+        $output->writeln('re-persist unlocked object');
+        $this->em->persist($dummyEntity);
+
+        $output->writeln('Update object!');
+        $dummyEntity
+            ->setTitle('Updated Dummy Title')
+            ->setDescription('Updated Dummy Description')
+            ;
+        $this->em->persist($dummyEntity);
+        try{
+            $this->em->flush();
+        }catch(LockedObjectException $e){
+            $output->writeln($e->getMessage());
+        }
+        $output->writeln('unlock update lock');
+        $output->writeln($objectLocker->unlock(new DummyEntity(), ObjectLockParams::UPDATE_LOCK));
+        $this->em->flush();
+
+        $output->writeln('Remove Locked Object!');
+        try{
+            $this->em->remove($dummyEntity);
+        }catch(LockedObjectException $e){
+            $output->writeln($e->getMessage());
+        }
+        $output->writeln('unlock delete lock');
+        $output->writeln($objectLocker->unlock(new DummyEntity(), ObjectLockParams::DELETE_LOCK));
+        $this->em->remove($dummyEntity);
+
+        $this->em->flush();
     }
 }
