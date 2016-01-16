@@ -67,3 +67,16 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+ep_display:
+    global:
+        image_render: true
+        file_render: true
+        templating: EPDisplayBundle:display.html.twig
+        exclude_vars:
+            - locale
+            - path
+            - exclude
+        array_collection_render: true
+        collection_item_count: 11
+
