@@ -777,12 +777,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/EnterprisePHP/EPAsyncEventDispatcherBundle.git",
-                "reference": "1d124c70bcf23ddd07fff1d9ba4328ac29d44f42"
+                "reference": "da408f4656d9e42e5f44fe61e7075b6e26372eff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EnterprisePHP/EPAsyncEventDispatcherBundle/zipball/1d124c70bcf23ddd07fff1d9ba4328ac29d44f42",
-                "reference": "1d124c70bcf23ddd07fff1d9ba4328ac29d44f42",
+                "url": "https://api.github.com/repos/EnterprisePHP/EPAsyncEventDispatcherBundle/zipball/da408f4656d9e42e5f44fe61e7075b6e26372eff",
+                "reference": "da408f4656d9e42e5f44fe61e7075b6e26372eff",
                 "shasum": ""
             },
             "require": {
@@ -839,7 +839,7 @@
                 "source": "https://github.com/EnterprisePHP/EPAsyncEventDispatcherBundle/tree/master",
                 "issues": "https://github.com/EnterprisePHP/EPAsyncEventDispatcherBundle/issues"
             },
-            "time": "2016-01-08 17:07:28"
+            "time": "2016-01-09 01:05:34"
         },
         {
             "name": "enterprisephp/display-bundle",
@@ -847,12 +847,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/EnterprisePHP/EPDisplayBundle.git",
-                "reference": "2bb3b24c5bbad08685e782e87ce577ba4dad2a79"
+                "reference": "208ab1e4d1e25910ff30b252fcb1f55f6f8bf070"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EnterprisePHP/EPDisplayBundle/zipball/2bb3b24c5bbad08685e782e87ce577ba4dad2a79",
-                "reference": "2bb3b24c5bbad08685e782e87ce577ba4dad2a79",
+                "url": "https://api.github.com/repos/EnterprisePHP/EPDisplayBundle/zipball/208ab1e4d1e25910ff30b252fcb1f55f6f8bf070",
+                "reference": "208ab1e4d1e25910ff30b252fcb1f55f6f8bf070",
                 "shasum": ""
             },
             "require": {
@@ -910,7 +910,7 @@
                 "source": "https://github.com/EnterprisePHP/EPDisplayBundle/tree/master",
                 "issues": "https://github.com/EnterprisePHP/EPDisplayBundle/issues"
             },
-            "time": "2016-01-08 17:03:05"
+            "time": "2016-01-09 01:05:34"
         },
         {
             "name": "enterprisephp/doctrine-lock-bundle",
@@ -918,12 +918,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/EnterprisePHP/EPDoctrineLockBundle.git",
-                "reference": "7c9288ce84c17b2f7b01f2b9db216655ae3c1b69"
+                "reference": "693f325652fa3388cfe2074ab037df49ea6f4d75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EnterprisePHP/EPDoctrineLockBundle/zipball/7c9288ce84c17b2f7b01f2b9db216655ae3c1b69",
-                "reference": "7c9288ce84c17b2f7b01f2b9db216655ae3c1b69",
+                "url": "https://api.github.com/repos/EnterprisePHP/EPDoctrineLockBundle/zipball/693f325652fa3388cfe2074ab037df49ea6f4d75",
+                "reference": "693f325652fa3388cfe2074ab037df49ea6f4d75",
                 "shasum": ""
             },
             "require": {
@@ -983,7 +983,7 @@
                 "source": "https://github.com/EnterprisePHP/EPDoctrineLockBundle/tree/master",
                 "issues": "https://github.com/EnterprisePHP/EPDoctrineLockBundle/issues"
             },
-            "time": "2016-01-08 17:01:26"
+            "time": "2016-01-12 19:31:15"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1795,16 +1795,16 @@
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.3.9",
+            "version": "v2.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/swiftmailer-bundle.git",
-                "reference": "3d21ada19f23631f558ad6df653b168e35362e78"
+                "reference": "5e1a90f28213231ceee19c953bbebc5b5b95c690"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/3d21ada19f23631f558ad6df653b168e35362e78",
-                "reference": "3d21ada19f23631f558ad6df653b168e35362e78",
+                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/5e1a90f28213231ceee19c953bbebc5b5b95c690",
+                "reference": "5e1a90f28213231ceee19c953bbebc5b5b95c690",
                 "shasum": ""
             },
             "require": {
@@ -1848,7 +1848,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2015-11-28 10:59:29"
+            "time": "2016-01-15 16:41:20"
         },
         {
             "name": "symfony/symfony",
@@ -1981,16 +1981,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.23.1",
+            "version": "v1.23.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "d9b6333ae8dd2c8e3fd256e127548def0bc614c6"
+                "reference": "ae53fc2c312fdee63773b75cb570304f85388b08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d9b6333ae8dd2c8e3fd256e127548def0bc614c6",
-                "reference": "d9b6333ae8dd2c8e3fd256e127548def0bc614c6",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ae53fc2c312fdee63773b75cb570304f85388b08",
+                "reference": "ae53fc2c312fdee63773b75cb570304f85388b08",
                 "shasum": ""
             },
             "require": {
@@ -2038,7 +2038,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-11-05 12:49:06"
+            "time": "2016-01-11 14:02:19"
         }
     ],
     "packages-dev": [
@@ -2096,16 +2096,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v2.8.1",
+            "version": "v2.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "2deb2ccbe184948ae4e85e7b99e962738d3d2d69"
+                "reference": "855dc0e829fad123966347612b4183e307338c11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/2deb2ccbe184948ae4e85e7b99e962738d3d2d69",
-                "reference": "2deb2ccbe184948ae4e85e7b99e962738d3d2d69",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/855dc0e829fad123966347612b4183e307338c11",
+                "reference": "855dc0e829fad123966347612b4183e307338c11",
                 "shasum": ""
             },
             "require": {
@@ -2147,7 +2147,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2015-12-11 08:57:52"
+            "time": "2016-01-06 09:59:23"
         }
     ],
     "aliases": [],
