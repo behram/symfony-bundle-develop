@@ -72,7 +72,7 @@ ep_display:
     global:
         image_render: true #defaults to true
         file_render: true # defaults to true
-        templating: EPDisplayBundle:display.html.twig #defaults to EPDisplayBundle:display.html.twig template
+        template: EPDisplayBundle:display.html.twig #defaults to EPDisplayBundle:display.html.twig template
         exclude_vars: # defaults to empty array
             - locale
             - path
