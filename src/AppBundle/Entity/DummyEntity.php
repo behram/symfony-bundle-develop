@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use EP\DisplayBundle\Entity\DisplayTrait;
 use EP\DoctrineLockBundle\Traits\LockableTrait;
 use EP\DoctrineLockBundle\Annotations\Lockable;
 
@@ -12,6 +13,7 @@ use EP\DoctrineLockBundle\Annotations\Lockable;
 class DummyEntity
 {
     use LockableTrait;
+    use DisplayTrait;
 
     /**
      * @var int
