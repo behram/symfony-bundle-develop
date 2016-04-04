@@ -5,10 +5,12 @@ namespace AppBundle\Entity;
 use EP\DisplayBundle\Entity\DisplayTrait;
 use EP\DoctrineLockBundle\Traits\LockableTrait;
 use EP\DoctrineLockBundle\Annotations\Lockable;
+use EP\DisplayBundle\Annotation\Display;
 
 /**
  * ObjectLock
  * @Lockable
+ * @Display()
  */
 class DummyEntity
 {
