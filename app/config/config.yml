@@ -78,5 +78,5 @@ ep_display:
             - deleteLocked
             - password
         array_collection_render: true # defaults to true
-        collection_item_count: 11 # defaults to 10
+        collection_item_count: 5 # defaults to 10
 
