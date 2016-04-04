@@ -15,5 +15,9 @@ AppBundle\Entity\DummyEntity:
   fields:
     title:
       type: string
+    avatar:
+      type: string
+    sampleFile:
+      type: string
     description:
       type: string

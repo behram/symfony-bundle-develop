@@ -34,6 +34,16 @@ class DummyEntity
     protected $description;
 
     /**
+     * @var string
+     */
+    protected $avatar;
+
+    /**
+     * @var string
+     */
+    protected $sampleFile;
+
+    /**
      * @var ArrayCollection|DummyRelation[]
      */
     protected $relations;
@@ -117,6 +127,44 @@ class DummyEntity
     public function getRelations()
     {
         return $this->relations;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAvatar()
+    {
+        return $this->avatar;
+    }
+
+    /**
+     * @param $avatar
+     * @return $this
+     */
+    public function setAvatar($avatar)
+    {
+        $this->avatar = $avatar;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSampleFile()
+    {
+        return $this->sampleFile;
+    }
+
+    /**
+     * @param $sampleFile
+     * @return $this
+     */
+    public function setSampleFile($sampleFile)
+    {
+        $this->sampleFile = $sampleFile;
+
+        return $this;
     }
 
     public function __toString()
