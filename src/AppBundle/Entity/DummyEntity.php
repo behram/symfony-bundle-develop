@@ -6,12 +6,12 @@ use Doctrine\Common\Collections\ArrayCollection;
 use EP\DisplayBundle\Entity\DisplayTrait;
 use EP\DoctrineLockBundle\Traits\LockableTrait;
 use EP\DoctrineLockBundle\Annotations\Lockable;
-use EP\DisplayBundle\Annotation\Display;
+use EP\DisplayBundle\Annotation as Display;
 
 /**
  * ObjectLock
  * @Lockable
- * @Display()
+ * @Display\Display()
  */
 class DummyEntity
 {
@@ -35,11 +35,13 @@ class DummyEntity
 
     /**
      * @var string
+     * @Display\Image(path="/uploads/images/", height="60", width="60")
      */
     protected $avatar;
 
     /**
      * @var string
+     * @Display\File(path="/uploads/files/")
      */
     protected $sampleFile;
 

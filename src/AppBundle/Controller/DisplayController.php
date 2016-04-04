@@ -32,6 +32,8 @@ class DisplayController extends Controller
         $dummyEntity
             ->setTitle('Demo test title')
             ->setDescription('Hello demo test dummy description')
+            ->setAvatar('behramcelen.png')
+            ->setSampleFile('sample.doc')
         ;
 
         foreach(range(1,15) as $value){
