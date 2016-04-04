@@ -72,11 +72,11 @@ ep_display:
     global:
         image_render: true #defaults to true
         file_render: true # defaults to true
-        template: EPDisplayBundle:display.html.twig #defaults to EPDisplayBundle:display.html.twig template
+        template: EPDisplayBundle::display.html.twig #defaults to EPDisplayBundle:display.html.twig template
         exclude_vars: # defaults to empty array
-            - locale
-            - path
-            - exclude
+            - updateLocked
+            - deleteLocked
+            - password
         array_collection_render: true # defaults to true
         collection_item_count: 11 # defaults to 10
 
