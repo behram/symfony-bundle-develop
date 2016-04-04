@@ -1,0 +1,19 @@
+AppBundle\Entity\DummyRelation:
+  type: entity
+  table: dummy_relation
+  repositoryClass: AppBundle\Entity\DummyRelationRepository
+  id:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+  manyToOne:
+    dummy:
+      targetEntity: AppBundle\Entity\DummyEntity
+      inversedBy: relations
+  fields:
+    name:
+      type: string
+    summary:
+      type: string

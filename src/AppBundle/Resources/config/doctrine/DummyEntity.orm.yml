@@ -8,6 +8,10 @@ AppBundle\Entity\DummyEntity:
       id: true
       generator:
         strategy: AUTO
+  oneToMany:
+    relations:
+      targetEntity: AppBundle\Entity\DummyRelation
+      mappedBy: dummy
   fields:
     title:
       type: string

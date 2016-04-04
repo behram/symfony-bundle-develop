@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use EP\DisplayBundle\Entity\DisplayTrait;
 use EP\DoctrineLockBundle\Traits\LockableTrait;
 use EP\DoctrineLockBundle\Annotations\Lockable;
@@ -31,6 +32,16 @@ class DummyEntity
      * @var string
      */
     protected $description;
+
+    /**
+     * @var ArrayCollection|DummyRelation[]
+     */
+    protected $relations;
+
+    public function __construct()
+    {
+        $this->relations = new ArrayCollection();
+    }
 
     /**
      * @return int
@@ -76,5 +87,40 @@ class DummyEntity
         $this->description = $description;
 
         return $this;
+    }
+
+    /**
+     * @param  DummyRelation $relation
+     * @return $this
+     */
+    public function addRelation(DummyRelation $relation)
+    {
+        if (!$this->relations->contains($relation)) {
+            $this->relations->add($relation);
+        }
+        return $this;
+    }
+
+    /**
+     * @param DummyRelation $relation
+     */
+    public function removeRelation(DummyRelation $relation)
+    {
+        if ($this->relations->contains($relation)) {
+            $this->relations->removeElement($relation);
+        }
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getRelations()
+    {
+        return $this->relations;
+    }
+
+    public function __toString()
+    {
+        return $this->getTitle();
     }
 }
